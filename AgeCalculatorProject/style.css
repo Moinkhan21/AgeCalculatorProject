@@ -1,0 +1,93 @@
+/* Reset default margin and padding for all elements, apply custom font, and ensure consistent box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+/* Main container with full-width and height to cover the viewport, and a background gradient */
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #b65001, #fcbe22); /* Gradient background */
+    color: #fff; /* Text color */
+    padding: 10px; /* Padding inside container */
+}
+
+/* Calculator box for organizing the title, input, and result section */
+.calculator {
+    width: 100%; /* Full width */
+    max-width: 600px; /* Maximum width */
+    margin-left: 10%; /* Left margin for alignment */
+    margin-top: 10%; /* Top margin for spacing */
+}
+
+/* Calculator title styling */
+.calculator h1 {
+    font-size: 60px; /* Large font size for title */
+}
+
+/* Styling for the highlighted subtitle within the title */
+.calculator h1 span {
+    color: #ffff76; /* Yellow color for emphasis */
+}
+
+/* Input section container with padding, border radius, and semi-transparent background */
+.input-box {
+    margin: 40px 0; /* Vertical spacing */
+    padding: 35px; /* Padding inside box */
+    border-radius: 10px; /* Rounded corners */
+    background: rgba(255, 255, 255, 0.3); /* Semi-transparent white background */
+    display: flex; /* Flex layout for alignment */
+    align-items: center; /* Center items vertically */
+}
+
+/* Input field for date selection */
+.input-box input {
+    flex: 1; /* Takes up available space */
+    margin-right: 20px; /* Spacing on the right */
+    padding: 14px 20px; /* Padding for input field */
+    border: 0; /* No border */
+    outline: 0; /* No outline */
+    font-size: 18px; /* Larger font size */
+    border-radius: 5px; /* Rounded corners */
+    position: relative; /* Position for custom calendar icon */
+}
+
+/* Button for triggering age calculation */
+.input-box button {
+    background-color: #ffff76; /* Yellow background */
+    border: 0; /* No border */
+    outline: 0; /* No outline */
+    padding: 15px 30px; /* Button padding */
+    border-radius: 5px; /* Rounded corners */
+    font-weight: 500; /* Medium weight for text */
+    color: #333; /* Dark text color */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* Custom styling for the calendar picker icon within the date input field */
+.input-box input::-webkit-calendar-picker-indicator {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    height: auto;
+    position: absolute;
+    background-position: calc(100% - 10px); /* Position icon at end of input */
+    background-size: 30px; /* Size of the calendar icon */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* Styling for the result display */
+#result {
+    font-size: 20px; /* Font size for result text */
+    margin-top: 20px; /* Spacing above result */
+}
+
+/* Highlight color for dynamic age information */
+#result span {
+    color: #ffff76; /* Yellow color for age values */
+}
